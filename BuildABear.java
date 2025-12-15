@@ -14,10 +14,37 @@ public class BuildABear {
    private String hasSpeaker;
    private String recording; 
 
-    //ENCAPSULATION: keep variables private, they cant be directly accessed bt this class 
+     //All objects can be creared using this pattern:
+      //ClassName objectName= new ClassName ();
+      
+      BuildABear horse = new BuildABear();
+      // "BuildABear horse" is DECLARING VARIABLES of type BuildABear
+      //"new BuildABear()" is CALLING A CONSTRUCTOR to set up the object 
+      //this Java CLASS (data is proteceted from users)
 
-    //2. CONSRUCTORS (initalize values)
+      //2. CONSTRUCTORS
+      // DEFAULT CONSTRUCTOR does not take any arguments (no-arg)
+      // what gets called wen user says =" new BuildABear()"
+      public BuildABear () {
+         this.type ="bear"; //WE PICK the initial values! 
+         this.name ="Berry"; 
+         this.fillLevel= 75;
+         this.price = 150.00;
+         this.hasSpeaker = false; 
+         this.recording = "";
+      }
+      //PARAMETERIZED CONSTRUCTOR allows user to provide args
+      //user PASSES initial values to the constructor call
+      public BuildABear(String t, String n, int fl) { 
+        this.type = t; //USER pciled the valie for typel 
+        this.name= n;
+        this.fillLevel= fl; 
+        this.price = 150.00;
+        this.hasSpeaker= false;
+        this.recording= "";
+        
 
-    //3. METHODS (behaviors/actions) 
+      }
 
+      //3. METHODS (behaviors/actions)
 }
