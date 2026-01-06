@@ -47,4 +47,26 @@ public class BuildABear {
       }
 
       //3. METHODS (behaviors/actions)
-}
+
+      //ACCESSORS ("getters") return the value of an instance variable 
+      public String getType() {
+        return type; 
+
+
+      public String getName(){
+        return Name;
+      }
+
+      public Int getFillLevel(){
+        return FillLevel;
+
+      }
+
+      public double getPrice(){
+      return price;
+      }
+     
+    
+    
+    
+    } 
