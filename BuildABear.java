@@ -10,17 +10,10 @@ public class BuildABear {
    private  String name; 
    private  int fillLevel; 
    private  double price;
-   private boolean hasSound;
    private String hasSpeaker;
    private String recording; 
 
-     //All objects can be creared using this pattern:
-      //ClassName objectName= new ClassName ();
-      
-      BuildABear horse = new BuildABear();
-      // "BuildABear horse" is DECLARING VARIABLES of type BuildABear
-      //"new BuildABear()" is CALLING A CONSTRUCTOR to set up the object 
-      //this Java CLASS (data is proteceted from users)
+    
 
       //2. CONSTRUCTORS
       // DEFAULT CONSTRUCTOR does not take any arguments (no-arg)
@@ -30,7 +23,6 @@ public class BuildABear {
          this.name ="Berry"; 
          this.fillLevel= 75;
          this.price = 150.00;
-         this.hasSpeaker = false; 
          this.recording = "";
       }
       //PARAMETERIZED CONSTRUCTOR allows user to provide args
@@ -40,7 +32,6 @@ public class BuildABear {
         this.name= n;
         this.fillLevel= fl; 
         this.price = 150.00;
-        this.hasSpeaker= false;
         this.recording= "";
         
 
@@ -51,14 +42,14 @@ public class BuildABear {
       //ACCESSORS ("getters") return the value of an instance variable 
       public String getType() {
         return type; 
-
-
-      public String getName(){
-        return Name;
       }
 
-      public Int getFillLevel(){
-        return FillLevel;
+      public String getName(){
+        return name;
+      }
+
+      public int getFillLevel(){
+        return fillLevel;
 
       }
 
@@ -66,7 +57,15 @@ public class BuildABear {
       return price;
       }
      
+      //Write a toString () medthod so that we can print an objects STATE 
+      //including this method changes what happens when you print an object
+      //otherwise, doing System.out.println(object) just shows a memory location
+      public String toString() {
+         String state  = "BuildABear[" + type + "," + name + "," + fillLevel + "," + price + "]";
+         return state;
+      }
     
+
     
     
     } 
